@@ -15,28 +15,16 @@ class UserRepository:
         self._next_id: int = 1
 
     def add(self, user: User) -> User:
-        user.id = self._next_id
-        self._store[self._next_id] = user
-        self._next_id += 1
-        return user
+        pass
 
     def get(self, user_id: int) -> Optional[User]:
-        return self._store.get(user_id)
+        pass
 
     def get_all(self) -> list[User]:
-        return list(self._store.values())
+        pass
 
     def update(self, user_id: int, **kwargs) -> Optional[User]:
-        user = self._store.get(user_id)
-        if user is None:
-            return None
-        for key, value in kwargs.items():
-            if hasattr(user, key) and key != "id":
-                setattr(user, key, value)
-        return user
+        pass
 
     def delete(self, user_id: int) -> bool:
-        if user_id not in self._store:
-            return False
-        del self._store[user_id]
-        return True
+        pass
